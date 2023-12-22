@@ -20,6 +20,8 @@ public class DoubleSolenoidIOPCM implements DoubleSolenoidIO{
     public void updateInputs(DoubleSolenoidIOInputs inputs) {
         if (dSolenoid.get() != Value.kOff) {
             inputs.isOn = true;
+        } else {
+            inputs.isOn = false;
         }
     }
 

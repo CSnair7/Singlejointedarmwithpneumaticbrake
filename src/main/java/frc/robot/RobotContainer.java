@@ -52,6 +52,7 @@ public class RobotContainer {
     m_driverController.y().onTrue(new InstantCommand(() -> arm.setPosition(1000), arm));
 
     m_driverController.leftBumper().onTrue(new InstantCommand(arm::activateBrake, arm));
+    m_driverController.rightBumper().onTrue(new InstantCommand(arm::deactivateBrake, arm));
   }
 
   /**
